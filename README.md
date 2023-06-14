@@ -2,7 +2,7 @@
 
 The code for the papers 
 
-**Z. Wang, X. Mu, and Y. Liu, “Near-Field Integrated Sensing and Communications,” *IEEE Wireless Commun. Lett.*, Early Access, May, 2023.** [[IEEE](https://ieeexplore.ieee.org/abstract/document/10135096)] [[Arxiv](https://arxiv.org/abs/2302.01153)]
+**Z. Wang, X. Mu, and Y. Liu, “Near-Field Integrated Sensing and Communications,” *IEEE Commun. Lett.*, Early Access, May, 2023.** [[IEEE](https://ieeexplore.ieee.org/abstract/document/10135096)] [[Arxiv](https://arxiv.org/abs/2302.01153)]
 
 
 ## Running the simulations
