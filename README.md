@@ -18,7 +18,7 @@ Run `main.m`
 
 ### Expected Results
 
-#### Convergence of the Proposed Algorithm
+#### Spectrum of MUSIC
 <img decoding="async" src="./results/MUSIC_spectrum.jpg" width="50%">
 
 ## Citing
