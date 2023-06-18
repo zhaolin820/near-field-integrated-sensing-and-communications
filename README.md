@@ -1,4 +1,4 @@
-# STARS Enabled Integrated Sensing and Communications
+# Near-Field Integrated Sensing and Communications
 
 The code for the papers 
 
