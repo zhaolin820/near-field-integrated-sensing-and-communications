@@ -15,9 +15,9 @@ function [spectrum, X, Y] = MUSIC_estimation(para, Rx, f, G)
 
 %% Generate signals
 Rs = Rx - f*f';
-A = matrix_decompisition(Rs);
+A = matrix_decomposition(Rs);
 L = chol(A*A');
-s = L'*(randn(para.N,para.T)+1i*randn(para.N,para.T))/sqrt(2); % dedicates sensin signal
+s = L'*(randn(para.N,para.T)+1i*randn(para.N,para.T))/sqrt(2); % dedicated sensing signal
 c = (randn(para.K, para.T)+1i*randn(para.K, para.T))/sqrt(2); % communication signal
 N_s = sqrt(1/2*para.noise) * ( randn(para.N, para.T) + 1i*randn(para.N, para.T) ); % noise
 
@@ -49,7 +49,7 @@ spectrum = spectrum ./ max(max(spectrum));
 
 end
 
-function [U_de] = matrix_decompisition(U)
+function [U_de] = matrix_decomposition(U)
     [P,C] = eig(U) ;
     U_de = P * (C.^(1/2)) * P';
 end
