@@ -22,7 +22,7 @@ c = (randn(para.K, para.T)+1i*randn(para.K, para.T))/sqrt(2); % communication si
 N_s = sqrt(1/2*para.noise) * ( randn(para.N, para.T) + 1i*randn(para.N, para.T) ); % noise
 
 X = f*c + s; % transmit signal
-Y_s = G*X + N_s; % receives signal
+Y_s = G*X + N_s; % receive signal
 
 
 %% MUSIC algorithm
