@@ -24,8 +24,8 @@ n = n';
 r_n = sqrt(r^2 + n.^2 - 2*r*n*cos(theta));
 a_r = -1i*2*pi/lambda * ((r - n*cos(theta))./ r_n - 1) .*  a;
 a_theta = -1i*2*pi/lambda * (r*n*sin(theta)) ./ r_n .* a;
-G_r = 2*a_r*a.';
-G_theta = 2*a_theta*a.';
+G_r = a_r*a.' + a*a_r.';
+G_theta = a_theta*a.' + a*a_theta.';
 
 %% Calculate elements of FIM
 J_11 = scale * 2*abs(beta)^2 * real([ trace(G_r*Rx*G_r'), trace(G_r*Rx*G_theta'); ...
