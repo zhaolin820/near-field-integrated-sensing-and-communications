@@ -16,7 +16,7 @@ para.T = 128; % the length of coherent time block
 para.Pt = 10^(20/10); % overall transmit power (dBm)
 para.K = 4; % user number
 para.noise = 10^(-60/10); % noise power in dBm
-para.Rmin = 0; % minimum communication rate
+para.Rmin = 5; % minimum communication rate
 
 para.c = 3e8; % speed of light in free space
 para.f = 28e9; % carrier frequency
