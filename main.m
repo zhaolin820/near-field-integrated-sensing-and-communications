@@ -9,11 +9,13 @@ cvx_solver mosek
 para = para_init();
 
 [H, G, beta_s, r, theta, r_s, theta_s] = generate_channel(para);
-scale = 1e2; % if the optimization is failed, try to adjust this scale factor
+scale = 1e2; % if the optimization fails, try to adjust this scale factor
 
 % Optimize the transmit waveform
 [Rx, f] = SDR_fully_digital(para, H, beta_s, scale);
 
+% Calculate the communication rates for all users
+[rate] = rate_calculator(para, H, Rx, f);
 
 % Calculate the CRB matrix
 [J_11, J_12, J_22] = FIM(para, Rx, beta_s, scale);
