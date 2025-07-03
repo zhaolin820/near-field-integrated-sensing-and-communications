@@ -20,7 +20,7 @@ cvx_begin
     variable Rx(para.N, para.N) complex semidefinite
 
     [J_11, J_12, J_22] = FIM(para, Rx, beta_s, scale);
-    [J_11 - U, J_12; J_12', J_22] == hermitian_semidefinite(4);
+    [J_11 - U, J_12; J_12.', J_22] == hermitian_semidefinite(4);
 
     for k = 1:para.K
         hk = H(:,k);
