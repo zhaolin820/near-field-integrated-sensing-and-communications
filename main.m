@@ -23,7 +23,7 @@ scale = scale*para.noise/para.T;
 J_11 = J_11/scale;
 J_12 = J_12/scale;
 J_22 = J_22/scale;
-CRB = real(inv(J_11 - J_12*inv(J_22)*J_12'));
+CRB = real(inv(J_11 - J_12*inv(J_22)*J_12.'));
 
 % MUSIC algorithm
 [spectrum, X, Y] = MUSIC_estimation(para, Rx, f, G);
